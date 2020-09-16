@@ -9,11 +9,11 @@ import { Subject } from 'rxjs';
 export class ShoppingListService {
     ingredientChanged = new Subject<Ingredient[]>()
     startingEditing = new Subject<number>();
-    // ingredients : Ingredient[] = [
-    //     new Ingredient ('Apples', 8),
-    //     new Ingredient (' Tomato', 6)
-    //   ];
-    ingredients : Ingredient[] = [];
+    ingredients : Ingredient[] = [
+        new Ingredient ('Apples', 8),
+        new Ingredient (' Tomato', 6)
+      ];
+    // ingredients : Ingredient[] = [];
     
       getIngredients(){
         return this.ingredients.slice();

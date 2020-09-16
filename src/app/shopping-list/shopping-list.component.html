@@ -3,10 +3,11 @@
         <app-shopping-list-edit></app-shopping-list-edit>
         <hr>
         <ul class="list-group">
+            <!-- the async subscribe to your observable and give access to your array in it -->
             <a 
             class="list-group-item" 
             style="cursor: pointer;" 
-            *ngFor="let ing of ingredients; let i=index"
+            *ngFor="let ing of (ingredients | async).ingredients; let i=index"
             (click)="onEditItem(i)">
             {{ing.name}} ({{ing.amount}})
             </a>
